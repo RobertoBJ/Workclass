@@ -1,6 +1,6 @@
 package com.example.Class
 
-class Workclass {
+//class Workclass {
 
     fun main(){
         //Numeric variables
@@ -11,7 +11,7 @@ class Workclass {
 
         //String variables
         val gender:Char = 'M'
-        val name:String = "Ricardo Reyes"
+        val name:String = "Roberto Bravo"
 
         //Bool variables
         val isGreater:Boolean = false
@@ -23,6 +23,9 @@ class Workclass {
         println(add())
         println(product(5,8))
         printarray(names)
+
+        val numers = arrayOf(1,2,3,4,5,6,7,8,9,10)
+        isEven(numers)
     }
 
     fun add():Int{
@@ -40,6 +43,15 @@ class Workclass {
         for(name in names){
             println("hello $name")
         }
-
     }
-}
+
+    fun isEven(numbers:Array<Int>){
+        for(number in numbers){
+            if(number % 2 == 0){
+                println("the number $number is even")
+            }else{
+                println("the number $number is odd")
+            }
+        }
+    }
+//}
