@@ -14,7 +14,7 @@ package com.example.Class
         val name:String = "Roberto Bravo"
 
         //Bool variables
-        val isGreater:Boolean = false
+        //val isGreater:Boolean = false
 
         //Collection variables
         val names = arrayOf("Erick", "Sofia", "Javier", "Veronica")
