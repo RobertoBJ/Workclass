@@ -5,12 +5,12 @@ package com.example.Class
     fun main(){
         //Numeric variables
         val age:Int =20
-        val long_number:Long = 789123128937
-        val temperature:Float = 27.33f
-        val weight:Double = 64.1231
+       // val long_number:Long = 789123128937
+        //val temperature:Float = 27.33f
+        //val weight:Double = 64.1231
 
         //String variables
-        val gender:Char = 'M'
+        //val gender:Char = 'M'
         val name:String = "Roberto Bravo"
 
         //Bool variables
