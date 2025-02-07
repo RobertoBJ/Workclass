@@ -16,20 +16,26 @@ import com.example.trabajoclases.ui.theme.TrabajoclasesTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
         setContent {
+            //creacion de temas
             TrabajoclasesTheme {
+                Text(text = "Hello user!")
+                Text(text = "Welcome to your first application!")
+
+                /*
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
+                 */
             }
         }
     }
 }
-
+/*
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -45,3 +51,4 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+ */
