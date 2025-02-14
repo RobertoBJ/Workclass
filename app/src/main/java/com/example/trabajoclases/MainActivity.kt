@@ -33,7 +33,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.NavHostController
+import com.example.trabajoclases.screens.MainMenuScreen
+import com.example.trabajoclases.screens.HomeScreen
+import com.example.trabajoclases.screens.TestScreen
 import com.example.trabajoclases.ui.theme.TrabajoclasesTheme
+
+
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +52,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             //creacion de temas
             TrabajoclasesTheme {
+
+                ComposeMultiScreenApp()
+/*
                 Column {
                    Column() {
                        TextComposable("Roberto")
@@ -61,9 +74,12 @@ class MainActivity : ComponentActivity() {
                         CustomText()
                     }
                 }
+                */
+
             }
         }
     }
+    /*
     @Preview(showBackground = true)
     @Composable
     fun TextComposable(name:String = "Empty"){
@@ -114,6 +130,7 @@ class MainActivity : ComponentActivity() {
 
         }
     }
+
     @Preview(showBackground = true)
     @Composable
     fun CustomText () {
@@ -125,4 +142,19 @@ class MainActivity : ComponentActivity() {
             Text(stringResource(R.string.example_text), style = TextStyle(brush = Brush.linearGradient(colors = gradientColors )))
         }
     }
+
+     */
+    @Composable
+    fun ComposeMultiScreenApp(){
+        val navController = rememberNavController()
+        SetupNavGraph(navController = navController)
+    }
+    @Composable
+    fun SetupNavGraph(navController: NavHostController){
+        NavHost(navController = navController, startDestination = "main_menu"){
+            composable("main_menu") { MainMenuScreen(navController) }
+            composable("home_screen") { HomeScreen(navController) }
+            composable("test_screen") { TestScreen(navController) }
+            }
+        }
 }
