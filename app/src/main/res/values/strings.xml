@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">trabajoclases</string>
+    <string name="example_text">Hello World From Strings.xml</string>
+    <string name="ipsum_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
 </resources>
