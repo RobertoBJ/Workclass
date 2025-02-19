@@ -11,13 +11,16 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 
 @Composable
-fun MainMenuScreen(navController: NavHostController){
+fun MainMenuScreen(navController: NavHostController) {
     Column(modifier = Modifier.padding(10.dp).fillMaxSize()) {
-        Text("Main Menu")
-        Button(onClick = {navController.navigate("home_screen")}){
-            
+
+        Button(onClick = { navController.navigate("home_screen") }) {
+            Text("Main Menu")
+        }
+
+        Button(onClick = { navController.navigate("test_screen") }) {
+            Text("TestScreen")
         }
     }
-
-
 }
+
