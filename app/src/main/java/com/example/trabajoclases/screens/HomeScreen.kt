@@ -39,11 +39,11 @@ fun HomeScreen(navController: NavHostController){
         .fillMaxSize()
         .padding(0.dp, 60.dp, 0.dp, 0.dp)
         .verticalScroll(rememberScrollState())) {
+        topbar()
         content1()
         content2()
-
-        }
     }
+}
 @Preview(showBackground = true)
 @Composable
 fun content1(){
@@ -69,20 +69,22 @@ fun content2(){
         .fillMaxWidth()
         .padding(5.dp)){
 
-    }
-    Row() {
-        Image(modifier = Modifier
-            .width(80.dp)
-            .height(200.dp),
-            painter = painterResource(R.drawable.android),
-            contentDescription = "AndroidLogo",
-            contentScale = ContentScale.Crop
-        )
-        Column() {
-            Text(text = "This is a title", fontSize = 12.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(5.dp))
-            Text(stringResource(R.string.ipsum_text), textAlign = TextAlign.Justify, lineHeight = 14.sp, fontSize = 10.sp, modifier =Modifier.padding(10.dp))
+        Row() {
+            Image(modifier = Modifier
+                .width(80.dp)
+                .height(200.dp),
+                painter = painterResource(R.drawable.android),
+                contentDescription = "AndroidLogo",
+                contentScale = ContentScale.Crop
+            )
+            Column() {
+                Text(text = "This is a title", fontSize = 12.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(5.dp))
+                Text(stringResource(R.string.ipsum_text), textAlign = TextAlign.Justify, lineHeight = 14.sp, fontSize = 10.sp, modifier =Modifier.padding(10.dp))
+            }
         }
+
     }
+
 }
 
 @Composable
