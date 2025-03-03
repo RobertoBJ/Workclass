@@ -21,6 +21,10 @@ fun MainMenuScreen(navController: NavHostController) {
         Button(onClick = { navController.navigate("test_screen") }) {
             Text("TestScreen")
         }
+
+        Button(onClick = { navController.navigate("xbox_screen") }) {
+            Text("XboxScreen")
+        }
     }
 }
 
