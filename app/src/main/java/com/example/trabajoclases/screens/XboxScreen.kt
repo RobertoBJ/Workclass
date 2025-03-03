@@ -57,6 +57,7 @@ fun UserHeader() {
         )
         Spacer(modifier = Modifier.width(8.dp))
         Column {
+            Text("RBJ",fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.White)
             Text("ULTIMATE", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.White)
             Text("59,653 G  |  2,874", fontSize = 14.sp, color = Color.Gray)
         }
@@ -77,6 +78,8 @@ fun FeaturedGame() {
     val games = listOf(
         Pair(R.drawable.haloinfinite, "Halo Infinite"),
         Pair(R.drawable.fh5, "Forza Horizon 5"),
+        Pair(R.drawable.re4remake, "Resident Evil 4 Remake"),
+        Pair(R.drawable.eldenring, "Elden Ring")
     )
 
     LazyRow(
@@ -122,6 +125,14 @@ fun FeaturedGame() {
 
 @Composable
 fun FriendsSection() {
+    val friends = listOf(
+        "Último visto hace 7 h: Inicio",
+        "Último visto hace 1 h: Inicio",
+        "Último visto hace 10 h: Inicio",
+        "Último visto hace 24 h: Inicio",
+        "Último visto hace 9 h: Inicio"
+    )
+
     Column(modifier = Modifier.background(Color.Black)) {
         Text("Amigos disponibles", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.White)
         Row(
@@ -130,7 +141,9 @@ fun FriendsSection() {
                 .horizontalScroll(rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            FriendItem("Último visto hace 7 h: Inicio")
+            friends.forEach { status ->
+                FriendItem(status)
+            }
         }
     }
 }
@@ -165,6 +178,8 @@ fun FriendItem(status: String) {
         }
     }
 }
+
+
 
 @Composable
 fun BottomNavigationBar() {
